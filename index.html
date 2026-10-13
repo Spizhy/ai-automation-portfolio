@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html data-theme="dark" data-theme-primary="darkGreen" lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Боженко Илья | AI-DevOps & AI-Инженер</title>
+  <meta name="description" content="Боженко Илья — Инженер по ИИ-автоматизации и DevOps. Автоматизация процессов разработки, контейнеризация сервисов, настройка CI/CD-пайплайнов и интеграция AI-моделей.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-theme-primary="darkGreen">
+  <div id="__nuxt">
+    <div id="frame-wrapper" class="relative flex h-dvh overflow-hidden p-2 transition-[padding] duration-700">
+      <!-- Ambient Background Lights -->
+      <div id="ambient-lights-wrapper">
+        <div id="bg-light-1" class="light-initial pointer-events-none fixed top-0 left-0 aspect-square w-[130vmax] opacity-20 md:w-[90vmax] xl:w-[70vmax]" data-gsap="background-light" data-loading-opacity="0.2" aria-hidden="true" data-v-e5884b62 data-v-2c31ff76>
+          <div class="background-light size-full rounded-full bg-primary transition-colors duration-700 will-change-transform" data-v-e5884b62 data-v-2c31ff76></div>
+        </div>
+        <div id="bg-light-2" class="light-initial pointer-events-none fixed top-0 left-0 aspect-square w-[130vmax] opacity-15 md:w-[90vmax] xl:w-[70vmax]" data-gsap="background-light" data-loading-opacity="0" aria-hidden="true" data-v-e5884b62 data-v-2c31ff76>
+          <div class="background-light size-full rounded-full bg-primary transition-colors duration-700 will-change-transform" data-v-e5884b62 data-v-2c31ff76></div>
+        </div>
+      </div>
+
+      <!-- Primary OS/IDE Frame -->
+      <div id="frame-primary" class="size-full frame-primary relative overflow-hidden rounded border border-base-300 transition-all duration-700">
+        <!-- Left Sidebar / Mobile Header -->
+        <header class="z-30 grid grid-cols-subgrid grid-rows-1 border-b border-base-300 md:grid-rows-subgrid md:border-r md:border-b-0 glossy-25 [grid-area:header]">
+          <div class="flex items-center justify-center border-r border-base-300 md:border-r-0 md:border-b">
+            <a href="#home" data-route="home" class="router-link-active router-link-exact-active animate-logo text-neutral hover:text-primary" aria-label="Боженко Илья | AI-DevOps & AI-Инженер">
+              <svg viewBox="0 0 18 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="logo-monogram svg-origin-center h-5 overflow-visible">
+                <g class="logo-m-brackets">
+                  <path d="m9 3.104 3.225 3.224a1.73 1.73 0 0 0 2.445 0l.23-.229a.648.648 0 0 0 0-.917L10.221.506a1.729 1.729 0 0 0-2.444 0l-3.151 3.15a.648.648 0 0 0 .243 1.07l1.341.473c.314.11.663.03.898-.205z"></path>
+                  <path d="m9 14.896-3.225-3.225a1.729 1.729 0 0 0-2.444 0l-.23.23a.648.648 0 0 0 0 .916l4.677 4.677c.675.675 1.77.675 2.444 0l3.15-3.15a.648.648 0 0 0-.242-1.07l-1.341-.473a.864.864 0 0 0-.898.205L9 14.896z"></path>
+                </g>
+                <path class="logo-m-slash" d="M2.665 5.339a.54.54 0 0 0-.69.33 2.161 2.161 0 0 0 1.322 2.756l12.038 4.236a.54.54 0 0 0 .69-.33 2.161 2.161 0 0 0-1.322-2.756z"></path>
+              </svg>
+            </a>
+          </div>
+          <nav class="hidden items-center justify-center md:flex" aria-label="Main Menu">
+            <ul id="main-menu-list" class="flex w-full md:flex-col">
+              <li class="flex w-full">
+                <a href="#home" data-route="home" aria-current="page" class="nav-item router-link-active text-neutral tooltip flex w-full justify-center py-2 font-medium lowercase transition-colors hover:text-primary" aria-label="Главная" data-tip="главная">
+                  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" class="iconify iconify--lucide" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></g></svg>
+                </a>
+              </li>
+              <li class="flex w-full">
+                <a href="#about" data-route="about" class="nav-item tooltip flex w-full justify-center py-2 font-medium lowercase transition-colors hover:text-primary" aria-label="Обо мне" data-tip="обо-мне">
+                  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" class="iconify iconify--lucide" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></g></svg>
+                </a>
+              </li>
+              <li class="flex w-full">
+                <a href="#work" data-route="work" class="nav-item tooltip flex w-full justify-center py-2 font-medium lowercase transition-colors hover:text-primary" aria-label="Проекты" data-tip="проекты">
+                  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" class="iconify iconify--lucide" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 5a2 2 0 0 1 2 2v8.526a2 2 0 0 0 .212.897l1.068 2.127a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45l1.068-2.127A2 2 0 0 0 4 15.526V7a2 2 0 0 1 2-2zm2.054 10.987H3.946"/></svg>
+                </a>
+              </li>
+              <li class="flex w-full">
+                <a href="#achievements" data-route="achievements" class="nav-item tooltip flex w-full justify-center py-2 font-medium lowercase transition-colors hover:text-primary" aria-label="Навыки и опыт" data-tip="навыки-и-опыт">
+                  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" class="iconify iconify--lucide" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 14.66V17a1 1 0 0 1-1 1a2 2 0 0 0-2 2v2m7-7.34V17a1 1 0 0 0 1 1a2 2 0 0 1 2 2v2m.916-12H19.5A2.5 2.5 0 0 0 22 7.5V5a1 1 0 0 0-1-1h-3M4 22h16"/><path d="M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z"/><path d="M6.084 10H4.5A2.5 2.5 0 0 1 2 7.5V5a1 1 0 0 1 1-1h3"/></g></svg>
+                </a>
+              </li>
+              <li class="flex w-full">
+                <a href="#contact" data-route="contact" class="nav-item tooltip flex w-full justify-center py-2 font-medium lowercase transition-colors hover:text-primary" aria-label="Контакты" data-tip="контакты">
+                  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" class="iconify iconify--lucide" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m22 7l-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect width="20" height="16" x="2" y="4" rx="2"/></g></svg>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <!-- Mobile Wordmark -->
+          <a href="#home" data-route="home" class="router-link-active place-self-center font-display text-sm font-bold tracking-tight text-neutral lowercase md:hidden" aria-label="Боженко Илья | AI-DevOps & AI-Инженер">
+            <span>илья</span><span class="text-primary">&lt;боженко&gt;</span>
+          </a>
+          <div class="flex items-center justify-center text-neutral md:hidden">
+            <button id="mobile-menu-btn" aria-label="Main Menu" class="flex size-full items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" class="iconify iconify--custom svg-origin-center icon-menu" style="font-size:1.25em;" width="1em" height="1em" viewBox="0 0 24 24"><g fill="currentColor"><path d="M3 5a1 1 0 0 0-1 1 1 1 0 0 0 1 1h18a1 1 0 0 0 1-1 1 1 0 0 0-1-1Z" class="top"/><path d="M3 11a1 1 0 0 0-1 1 1 1 0 0 0 1 1h18a1 1 0 0 0 1-1 1 1 0 0 0-1-1z" class="center"/><path d="M3 17a1 1 0 0 0-1 1 1 1 0 0 0 1 1h18a1 1 0 0 0 1-1 1 1 0 0 0-1-1z" class="bottom"/></g></svg>
+            </button>
+          </div>
+          <!-- Mobile Menu Drawer -->
+          <div id="main-menu" class="glossy-90 absolute inset-x-0 top-10 hidden height-inner-frame flex-col items-center justify-between p-4 md:hidden">
+            <div></div>
+            <nav aria-label="Main Menu">
+              <ul class="flex flex-col items-center text-3xl font-bold">
+                <li><a href="#home" data-route="home" class="flex w-full justify-center py-2 font-medium lowercase transition-colors hover:text-primary">главная</a></li>
+                <li><a href="#about" data-route="about" class="flex w-full justify-center py-2 font-medium lowercase transition-colors hover:text-primary">обо-мне</a></li>
+                <li><a href="#work" data-route="work" class="flex w-full justify-center py-2 font-medium lowercase transition-colors hover:text-primary">проекты</a></li>
+                <li><a href="#achievements" data-route="achievements" class="flex w-full justify-center py-2 font-medium lowercase transition-colors hover:text-primary">навыки-и-опыт</a></li>
+                <li><a href="#contact" data-route="contact" class="flex w-full justify-center py-2 font-medium lowercase transition-colors hover:text-primary">контакты</a></li>
+              </ul>
+            </nav>
+            <div class="flex h-10 items-center gap-4" aria-label="Social Profiles">
+              <a href="https://github.com/Spizhy" rel="noopener noreferrer" target="_blank" class="flex h-full items-center px-2 transition-[scale,color] hover:scale-125 hover:text-neutral" aria-label="GitHub Spizhy"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12c0 5.303 3.438 9.8 8.205 11.385c.6.113.82-.258.82-.577c0-.285-.01-1.04-.015-2.04c-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729c1.205.084 1.838 1.236 1.838 1.236c1.07 1.835 2.809 1.305 3.495.998c.108-.776.417-1.305.76-1.605c-2.665-.3-5.466-1.332-5.466-5.93c0-1.31.465-2.38 1.235-3.22c-.135-.303-.54-1.523.105-3.176c0 0 1.005-.322 3.3 1.23c.96-.267 1.98-.399 3-.405c1.02.006 2.04.138 3 .405c2.28-1.552 3.285-1.23 3.285-1.23c.645 1.653.24 2.873.12 3.176c.765.84 1.23 1.91 1.23 3.22c0 4.61-2.805 5.625-5.475 5.92c.42.36.81 1.096.81 2.22c0 1.606-.015 2.896-.015 3.286c0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+              <a href="mailto:ilyaboztech@gmail.com" class="flex h-full items-center px-2 transition-[scale,color] hover:scale-125 hover:text-neutral" aria-label="Email"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m22 7l-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect width="20" height="16" x="2" y="4" rx="2"/></g></svg></a>
+              <a href="tel:+79776491768" class="flex h-full items-center px-2 transition-[scale,color] hover:scale-125 hover:text-neutral" aria-label="Телефон"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 16.92v3a2 2 0 0 1-2.18 2a19.79 19.79 0 0 1-8.63-3.07a19.5 19.5 0 0 1-6-6a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+            </div>
+          </div>
+        </header>
+
+        <!-- Top Window Bar -->
+        <div class="grid grid-cols-[1fr_auto_1fr] items-center gap-4 border-b border-base-300 hidden glossy-25 [grid-area:top] md:grid">
+          <a href="#home" data-route="home" class="router-link-active router-link-exact-active col-start-2 flex items-center justify-self-center font-display text-sm font-bold tracking-tight text-neutral lowercase" aria-label="Боженко Илья | AI-DevOps & AI-Инженер" tabindex="-1">
+            <span>илья</span><span class="text-primary transition-colors">&lt;боженко&gt;</span>
+          </a>
+          <div class="flex gap-2 opacity-50 col-start-3 mr-4 justify-self-end">
+            <button id="btn-resize-window" class="flex items-center transition-colors hover:text-neutral" aria-label="Resize Window" tabindex="-1">
+              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" class="iconify iconify--lucide" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14"/></svg>
+            </button>
+            <button id="btn-fullscreen-window" class="flex items-center transition-colors hover:text-neutral" aria-label="Toggle Fullscreen" tabindex="-1">
+              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" class="iconify iconify--lucide -rotate-90" style="font-size:0.8em;" width="1em" height="1em" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" rx="2"/></svg>
+            </button>
+            <button id="btn-close-window" class="flex items-center transition-colors hover:text-neutral" aria-label="Close Window" tabindex="-1">
+              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" class="iconify iconify--lucide" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6L6 18M6 6l12 12"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Main Scrollable Frame Content -->
+        <div id="frame-content" class="scrollbar-custom relative overflow-x-hidden overflow-y-scroll [grid-area:content]" tabindex="0">
+          <div>
+            <div class="relative">
+              <!-- Giant Sticky Scrolling Background Text -->
+              <div class="absolute inset-0 h-full pointer-events-none">
+                <div class="sticky inset-0 flex height-inner-frame items-center overflow-hidden select-none" tabindex="-1">
+                  <div id="scrolling-text-track" class="flex shrink-0 will-change-transform" data-gsap="scrolling-text">
+                    <span class="scrolling-word px-[0.2em] text-[20rem] leading-none font-extrabold whitespace-nowrap text-[black] lowercase opacity-10 md:text-[30rem] xl:text-[40rem]">ai-devops</span>
+                    <span class="scrolling-word px-[0.2em] text-[20rem] leading-none font-extrabold whitespace-nowrap text-[black] lowercase opacity-10 md:text-[30rem] xl:text-[40rem]">ai-devops</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- SPA Main Container -->
+              <main class="relative flex-1">
+                <!-- ==================== VIEW: HOME ==================== -->
+                <div id="view-home" data-view="home" class="spa-view active pb-16 md:pb-32">
+                  <!-- Hero Section -->
+                  <section>
+                    <div class="relative container flex height-inner-frame flex-col items-center justify-center gap-6 text-center text-balance">
+                      <span class="text-xs font-medium tracking-wider uppercase" data-gsap="supertitle">Инженер по ИИ-автоматизации и DevOps</span>
+                      <h1 class="title-1 lg:w-10/12" data-gsap="title">Привет, я Илья — <span class="text-primary transition-colors">AI-DevOps</span> и AI-инженер</h1>
+                      <p class="w-11/12 md:w-10/12 lg:w-6/12 2xl:w-5/12" data-gsap="subtitle">Автоматизация процессов разработки, контейнеризация сервисов, настройка CI/CD-пайплайнов и интеграция LLM-моделей в инфраструктуру проектов.</p>
+                      <div class="scroll-line absolute bottom-6 h-24" data-gsap="streak"></div>
+                    </div>
+                  </section>
+
+                  <!-- Draggable Info Panels Section -->
+                  <section class="page-section">
+                    <div class="flex flex-col gap-12">
+                      <div class="container mb-12 text-center" data-gsap="reveal-t">
+                        <h2 class="title-2" data-gsap="reveal">Инфраструктура и <span class="text-primary transition-colors">ИИ-автоматизация</span></h2>
+                      </div>
+                      <div>
+                        <div class="container flex justify-center">
+                          <div class="relative flex w-full flex-col justify-center gap-4 md:w-10/12 xl:aspect-6/4 xl:w-11/12">
+                            <!-- Panel 1: about-me -->
+                            <div content-type="richtext" class="draggable-panel w-full transition-transform ease-out odd:ml-auto xl:absolute xl:w-(--d-width) odd:xl:ml-0" style="z-index:1;--v8a037cee:0%;--b673b35a:18%;--v1755f560:unset;--v7b58bd77:unset;--v732bd956:58.333%;" data-v-ddaa91ec>
+                              <div class="flex h-full flex-col overflow-hidden rounded border border-base-300" data-gsap="slideIn">
+                                <div class="panel-handle glossy-90 flex h-10 min-h-10 items-center gap-4 border-b border-base-300 px-4 cursor-grab">
+                                  <h3 class="cursor-default font-body text-sm font-medium tracking-normal text-neutral lowercase">about-me</h3>
+                                  <div class="flex items-center gap-2 text-base-300 ml-auto">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" style="font-size:0.8em;" width="1em" height="1em" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" rx="2"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6L6 18M6 6l12 12"/></svg>
+                                  </div>
+                                </div>
+                                <div class="rich-text info-panel-lines glossy-75 p-4 font-medium" data-v-ddaa91ec>
+                                  <p>Привет! Меня зовут <span class="g">Боженко Илья</span>, я <span class="b">Инженер по ИИ-автоматизации и DevOps</span>.</p>
+                                  <p>Моя цель — позиция стажёра <span class="r">ИИ-DevOps / AI-инженера</span> для решения задач <span class="y">автоматизации разработки</span>, контейнеризации сервисов, настройки <span class="p">CI/CD-пайплайнов</span> и интеграции <span class="a">AI-моделей</span> в инфраструктуру проектов.</p>
+                                  <p>Специализируюсь на интеграции <span class="g">LLM (GPT-4o, Claude, Gemini)</span> в бэкенд-сервисы на <span class="b">FastAPI</span>, автоматизации анализа инцидентов и построении <span class="r">RAG-пайплайнов</span> с валидацией ответов нейросетей против галлюцинаций.</p>
+                                  <p>Создаю продакшн-инструменты в <span class="p">Open Source</span>, проектирую <span class="y">Telegram и Slack-ботов</span>, настраиваю <span class="a">Docker, Kubernetes</span> и автоматическую сборку образов в <span class="g">GitHub Actions / GitLab CI</span>.</p>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Panel 2: where-i-work -->
+                            <div content-type="richtext" class="draggable-panel w-10/12 sm:w-8/12 md:w-7/12 transition-transform ease-out odd:ml-auto xl:absolute xl:w-(--d-width) odd:xl:ml-0" style="z-index:2;--v8a037cee:50%;--b673b35a:0%;--v1755f560:unset;--v7b58bd77:unset;--v732bd956:33.333%;" data-v-ddaa91ec>
+                              <div class="flex h-full flex-col overflow-hidden rounded border border-base-300" data-gsap="slideIn">
+                                <div class="panel-handle glossy-90 flex h-10 min-h-10 items-center gap-4 border-b border-base-300 px-4 cursor-grab">
+                                  <h3 class="cursor-default font-body text-sm font-medium tracking-normal text-neutral lowercase">where-i-work</h3>
+                                  <div class="flex items-center gap-2 text-base-300 ml-auto">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" style="font-size:0.8em;" width="1em" height="1em" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" rx="2"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6L6 18M6 6l12 12"/></svg>
+                                  </div>
+                                </div>
+                                <div class="rich-text info-panel-lines glossy-75 p-4 font-medium" data-v-ddaa91ec>
+                                  <p>Базируюсь в г. Москва, Россия <span>🇷🇺</span></p>
+                                  <p>Открыт для стажировки и коммерческих проектов в Москве и удалённо <span>🌍</span></p>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Panel 3: portrait -->
+                            <div content-type="image" class="draggable-panel w-10/12 sm:w-8/12 md:w-7/12 transition-transform ease-out odd:ml-auto xl:absolute xl:w-(--d-width) odd:xl:ml-0" style="z-index:3;--v8a037cee:33%;--b673b35a:unset;--v1755f560:0%;--v7b58bd77:unset;--v732bd956:25.000%;" data-v-ddaa91ec>
+                              <div class="flex h-full flex-col overflow-hidden rounded border border-base-300" data-gsap="slideIn">
+                                <div class="panel-handle glossy-90 flex h-10 min-h-10 items-center gap-4 border-b border-base-300 px-4 cursor-grab">
+                                  <h3 class="cursor-default font-body text-sm font-medium tracking-normal text-neutral lowercase">profile-card</h3>
+                                  <div class="flex items-center gap-2 text-base-300 ml-auto">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" style="font-size:0.8em;" width="1em" height="1em" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" rx="2"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6L6 18M6 6l12 12"/></svg>
+                                  </div>
+                                </div>
+                                <div class="aspect-square w-full self-start bg-brand-green" data-v-ddaa91ec>
+                                  <div class="relative flex aspect-square size-full flex-col items-center justify-center p-6 text-base-100 select-none">
+                                    <svg viewBox="0 0 18 18" fill="currentColor" class="size-20 opacity-90">
+                                      <path d="m9 3.104 3.225 3.224a1.73 1.73 0 0 0 2.445 0l.23-.229a.648.648 0 0 0 0-.917L10.221.506a1.729 1.729 0 0 0-2.444 0l-3.151 3.15a.648.648 0 0 0 .243 1.07l1.341.473c.314.11.663.03.898-.205z"></path>
+                                      <path d="m9 14.896-3.225-3.225a1.729 1.729 0 0 0-2.444 0l-.23.23a.648.648 0 0 0 0 .916l4.677 4.677c.675.675 1.77.675 2.444 0l3.15-3.15a.648.648 0 0 0-.242-1.07l-1.341-.473a.864.864 0 0 0-.898.205L9 14.896z"></path>
+                                      <path d="M2.665 5.339a.54.54 0 0 0-.69.33 2.161 2.161 0 0 0 1.322 2.756l12.038 4.236a.54.54 0 0 0 .69-.33 2.161 2.161 0 0 0-1.322-2.756z"></path>
+                                    </svg>
+                                    <div class="mt-3 font-display text-lg font-extrabold tracking-tight">БОЖЕНКО ИЛЬЯ</div>
+                                    <div class="text-xs font-semibold opacity-80">AI-DevOps / AI Engineer</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Panel 4: focus-areas -->
+                            <div content-type="richtext" class="draggable-panel w-10/12 sm:w-8/12 md:w-7/12 transition-transform ease-out odd:ml-auto xl:absolute xl:w-(--d-width) odd:xl:ml-0" style="z-index:4;--v8a037cee:unset;--b673b35a:30%;--v1755f560:unset;--v7b58bd77:0%;--v732bd956:25.000%;" data-v-ddaa91ec>
+                              <div class="flex h-full flex-col overflow-hidden rounded border border-base-300" data-gsap="slideIn">
+                                <div class="panel-handle glossy-90 flex h-10 min-h-10 items-center gap-4 border-b border-base-300 px-4 cursor-grab">
+                                  <h3 class="cursor-default font-body text-sm font-medium tracking-normal text-neutral lowercase">focus-areas</h3>
+                                  <div class="flex items-center gap-2 text-base-300 ml-auto">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" style="font-size:0.8em;" width="1em" height="1em" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" rx="2"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6L6 18M6 6l12 12"/></svg>
+                                  </div>
+                                </div>
+                                <div class="rich-text info-panel-lines glossy-75 p-4 font-medium" data-v-ddaa91ec>
+                                  <p><span>🤖</span> Интеграция LLM в бэкенд</p>
+                                  <p><span>🛡️</span> RAG против галлюцинаций</p>
+                                  <p><span>🐳</span> Docker, K8s и CI/CD</p>
+                                  <p><span>🎓</span> КАИТ №20 (ИИ, 2027)</p>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- Panel 5: me-online -->
+                            <div content-type="social" class="draggable-panel w-10/12 sm:w-8/12 md:w-7/12 transition-transform ease-out odd:ml-auto xl:absolute xl:w-(--d-width) odd:xl:ml-0" style="z-index:5;--v8a037cee:unset;--b673b35a:unset;--v1755f560:30%;--v7b58bd77:5%;--v732bd956:25.000%;" data-v-ddaa91ec>
+                              <div class="flex h-full flex-col overflow-hidden rounded border border-base-300" data-gsap="slideIn">
+                                <div class="panel-handle glossy-90 flex h-10 min-h-10 items-center gap-4 border-b border-base-300 px-4 cursor-grab">
+                                  <h3 class="cursor-default font-body text-sm font-medium tracking-normal text-neutral lowercase">me-online</h3>
+                                  <div class="flex items-center gap-2 text-base-300 ml-auto">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" style="font-size:0.8em;" width="1em" height="1em" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" rx="2"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6L6 18M6 6l12 12"/></svg>
+                                  </div>
+                                </div>
+                                <ol class="info-panel-lines flex flex-col gap-1 glossy-75 p-4" data-v-ddaa91ec>
+                                  <li class="flex gap-2 font-medium"><a href="https://github.com/Spizhy" rel="noopener noreferrer" target="_blank" class="flex items-center gap-1 text-neutral transition-colors hover:text-primary"><span>github.com/Spizhy</span><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h10v10M7 17L17 7"/></svg></a></li>
+                                  <li class="flex gap-2 font-medium"><a href="mailto:ilyaboztech@gmail.com" class="flex items-center gap-1 text-neutral transition-colors hover:text-primary"><span>ilyaboztech@gmail.com</span><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h10v10M7 17L17 7"/></svg></a></li>
+                                  <li class="flex gap-2 font-medium"><a href="tel:+79776491768" class="flex items-center gap-1 text-neutral transition-colors hover:text-primary"><span>+7 (977)-649-17-68</span><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h10v10M7 17L17 7"/></svg></a></li>
+                                </ol>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container flex justify-center">
+                        <a href="#about" data-route="about" class="btn btn-main" role="button">
+                          <span data-gsap="btn-label" class="overflow-hidden">подробнее-обо-мне</span>
+                          <span class="flex items-center overflow-hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" style="font-size:1.125em;" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7-7l7 7l-7 7"/></svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </section>
+
+                  <!-- Projects Highlight Section -->
+                  <section class="page-section">
+                    <div class="container flex flex-col gap-12">
+                      <div class="flex justify-center" data-gsap="reveal-t">
+                        <h2 class="title-2" data-gsap="reveal">Ключевые <span class="text-primary transition-colors">проекты</span></h2>
+                      </div>
+                      <div id="home-projects-highlight" class="projects-list"></div>
+                      <div class="flex justify-center">
+                        <a href="#work" data-route="work" class="btn btn-main" role="button">
+                          <span data-gsap="btn-label" class="overflow-hidden">все-проекты</span>
+                          <span class="flex items-center overflow-hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" style="font-size:1.125em;" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7-7l7 7l-7 7"/></svg>
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </section>
+
+                  <!-- Testimonials & Collaboration will be shared below -->
+                  <div class="shared-testimonials-cta"></div>
+                </div>
+
+                <!-- ==================== VIEW: ABOUT ==================== -->
+                <div id="view-about" data-view="about" class="spa-view pb-16 md:pb-32">
+                  <section>
+                    <div class="relative container flex height-inner-frame flex-col items-center justify-center gap-6 text-center text-balance">
+                      <span class="text-xs font-medium tracking-wider uppercase">Обо мне</span>
+                      <h1 class="title-1 lg:w-10/12">Давайте познакомимся <span class="text-primary transition-colors">поближе</span></h1>
+                      <p class="w-11/12 md:w-10/12 lg:w-6/12 2xl:w-5/12">Мой опыт в ИИ-автоматизации и DevOps, образование в КАИТ №20, архитектурные подходы и стек технологий.</p>
+                      <div class="scroll-line absolute bottom-6 h-24"></div>
+                    </div>
+                  </section>
+
+                  <section class="page-section">
+                    <div class="flex flex-col gap-12">
+                      <div>
+                        <div class="container flex justify-center">
+                          <div class="relative flex w-full flex-col justify-center gap-4 md:w-10/12 xl:aspect-6/4 xl:w-11/12">
+                            <!-- About Panel 1: about-me -->
+                            <div content-type="richtext" class="draggable-panel w-full transition-transform ease-out odd:ml-auto xl:absolute xl:w-(--d-width) odd:xl:ml-0" style="z-index:1;--v8a037cee:0%;--b673b35a:18%;--v1755f560:unset;--v7b58bd77:unset;--v732bd956:58.333%;" data-v-ddaa91ec>
+                              <div class="flex h-full flex-col overflow-hidden rounded border border-base-300">
+                                <div class="panel-handle glossy-90 flex h-10 min-h-10 items-center gap-4 border-b border-base-300 px-4 cursor-grab">
+                                  <h2 class="cursor-default font-body text-sm font-medium tracking-normal text-neutral lowercase">experience-and-bio</h2>
+                                  <div class="flex items-center gap-2 text-base-300 ml-auto">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" style="font-size:0.8em;" width="1em" height="1em" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" rx="2"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6L6 18M6 6l12 12"/></svg>
+                                  </div>
+                                </div>
+                                <div class="rich-text info-panel-lines glossy-75 p-4 font-medium" data-v-ddaa91ec>
+                                  <p>Привет! Я <span class="g">Боженко Илья</span> — <span class="b">Инженер по ИИ-автоматизации и DevOps</span> (Москва / удалённо, с октября 2025 г. по настоящее время).</p>
+                                  <p>Разработал CLI-инструмент <span class="r">git-incident-pilot</span> для автоматического разбора логов инцидентов и формирования коммитов с исправлениями через <span class="p">LLM API</span>.</p>
+                                  <p>Спроектировал сервис <span class="y">omni-brand-copilot</span> на <span class="a">FastAPI</span> для генерации маркетингового контента с проверкой ограничений и стилистики по правилам бренда.</p>
+                                  <p>Создал бота <span class="g">market-radar-bot</span> для <span class="b">Telegram и Slack</span>, собирающего рыночные данные и генерирующего аналитические сводки, а также сервис <span class="p">triage-flow-worker</span> с асинхронной очередью тикетов и <span class="y">RAG-валидацией регламентов</span>.</p>
+                                  <p>Настроил <span class="a">Docker-контейнеры</span> и базовые пайплайны <span class="r">GitHub Actions / GitLab CI</span> для автоматической проверки кода и сборки образов в репозиториях.</p>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- About Panel 2: where-i-work -->
+                            <div content-type="richtext" class="draggable-panel w-10/12 sm:w-8/12 md:w-7/12 transition-transform ease-out odd:ml-auto xl:absolute xl:w-(--d-width) odd:xl:ml-0" style="z-index:2;--v8a037cee:54%;--b673b35a:0%;--v1755f560:unset;--v7b58bd77:unset;--v732bd956:33.333%;" data-v-ddaa91ec>
+                              <div class="flex h-full flex-col overflow-hidden rounded border border-base-300">
+                                <div class="panel-handle glossy-90 flex h-10 min-h-10 items-center gap-4 border-b border-base-300 px-4 cursor-grab">
+                                  <h2 class="cursor-default font-body text-sm font-medium tracking-normal text-neutral lowercase">where-i-work</h2>
+                                  <div class="flex items-center gap-2 text-base-300 ml-auto">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" style="font-size:0.8em;" width="1em" height="1em" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" rx="2"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6L6 18M6 6l12 12"/></svg>
+                                  </div>
+                                </div>
+                                <div class="rich-text info-panel-lines glossy-75 p-4 font-medium" data-v-ddaa91ec>
+                                  <p>Локация: Москва, Россия <span>🇷🇺</span></p>
+                                  <p>Формат работы: стажировка / проектная разработка / удалённо <span>🌎</span></p>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- About Panel 3: portrait -->
+                            <div content-type="image" class="draggable-panel w-10/12 sm:w-8/12 md:w-7/12 transition-transform ease-out odd:ml-auto xl:absolute xl:w-(--d-width) odd:xl:ml-0" style="z-index:3;--v8a037cee:18%;--b673b35a:unset;--v1755f560:0%;--v7b58bd77:unset;--v732bd956:25.000%;" data-v-ddaa91ec>
+                              <div class="flex h-full flex-col overflow-hidden rounded border border-base-300">
+                                <div class="panel-handle glossy-90 flex h-10 min-h-10 items-center gap-4 border-b border-base-300 px-4 cursor-grab">
+                                  <h2 class="cursor-default font-body text-sm font-medium tracking-normal text-neutral lowercase">profile-card</h2>
+                                  <div class="flex items-center gap-2 text-base-300 ml-auto">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" style="font-size:0.8em;" width="1em" height="1em" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" rx="2"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6L6 18M6 6l12 12"/></svg>
+                                  </div>
+                                </div>
+                                <div class="aspect-square w-full self-start bg-brand-blue" data-v-ddaa91ec>
+                                  <div class="relative flex aspect-square size-full flex-col items-center justify-center p-6 text-base-100 select-none">
+                                    <svg viewBox="0 0 18 18" fill="currentColor" class="size-20 opacity-90">
+                                      <path d="m9 3.104 3.225 3.224a1.73 1.73 0 0 0 2.445 0l.23-.229a.648.648 0 0 0 0-.917L10.221.506a1.729 1.729 0 0 0-2.444 0l-3.151 3.15a.648.648 0 0 0 .243 1.07l1.341.473c.314.11.663.03.898-.205z"></path>
+                                      <path d="m9 14.896-3.225-3.225a1.729 1.729 0 0 0-2.444 0l-.23.23a.648.648 0 0 0 0 .916l4.677 4.677c.675.675 1.77.675 2.444 0l3.15-3.15a.648.648 0 0 0-.242-1.07l-1.341-.473a.864.864 0 0 0-.898.205L9 14.896z"></path>
+                                      <path d="M2.665 5.339a.54.54 0 0 0-.69.33 2.161 2.161 0 0 0 1.322 2.756l12.038 4.236a.54.54 0 0 0 .69-.33 2.161 2.161 0 0 0-1.322-2.756z"></path>
+                                    </svg>
+                                    <div class="mt-3 font-display text-lg font-extrabold tracking-tight">БОЖЕНКО ИЛЬЯ</div>
+                                    <div class="text-xs font-semibold opacity-80">Москва • КАИТ №20</div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- About Panel 4: me-online -->
+                            <div content-type="social" class="draggable-panel w-10/12 sm:w-8/12 md:w-7/12 transition-transform ease-out odd:ml-auto xl:absolute xl:w-(--d-width) odd:xl:ml-0" style="z-index:4;--v8a037cee:unset;--b673b35a:27%;--v1755f560:unset;--v7b58bd77:0%;--v732bd956:25.000%;" data-v-ddaa91ec>
+                              <div class="flex h-full flex-col overflow-hidden rounded border border-base-300">
+                                <div class="panel-handle glossy-90 flex h-10 min-h-10 items-center gap-4 border-b border-base-300 px-4 cursor-grab">
+                                  <h2 class="cursor-default font-body text-sm font-medium tracking-normal text-neutral lowercase">me-online</h2>
+                                  <div class="flex items-center gap-2 text-base-300 ml-auto">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" style="font-size:0.8em;" width="1em" height="1em" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" rx="2"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6L6 18M6 6l12 12"/></svg>
+                                  </div>
+                                </div>
+                                <ol class="info-panel-lines flex flex-col gap-1 glossy-75 p-4" data-v-ddaa91ec>
+                                  <li class="flex gap-2 font-medium"><a href="https://github.com/Spizhy" rel="noopener noreferrer" target="_blank" class="flex items-center gap-1 text-neutral transition-colors hover:text-primary"><span>github.com/Spizhy</span><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h10v10M7 17L17 7"/></svg></a></li>
+                                  <li class="flex gap-2 font-medium"><a href="mailto:ilyaboztech@gmail.com" class="flex items-center gap-1 text-neutral transition-colors hover:text-primary"><span>ilyaboztech@gmail.com</span><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h10v10M7 17L17 7"/></svg></a></li>
+                                  <li class="flex gap-2 font-medium"><a href="tel:+79776491768" class="flex items-center gap-1 text-neutral transition-colors hover:text-primary"><span>+7 (977)-649-17-68</span><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h10v10M7 17L17 7"/></svg></a></li>
+                                </ol>
+                              </div>
+                            </div>
+                            <!-- About Panel 5: education & goal -->
+                            <div content-type="richtext" class="draggable-panel w-full transition-transform ease-out odd:ml-auto xl:absolute xl:w-(--d-width) odd:xl:ml-0" style="z-index:5;--v8a037cee:unset;--b673b35a:unset;--v1755f560:7%;--v7b58bd77:3%;--v732bd956:50.000%;" data-v-ddaa91ec>
+                              <div class="flex h-full flex-col overflow-hidden rounded border border-base-300">
+                                <div class="panel-handle glossy-90 flex h-10 min-h-10 items-center gap-4 border-b border-base-300 px-4 cursor-grab">
+                                  <h2 class="cursor-default font-body text-sm font-medium tracking-normal text-neutral lowercase">education-and-goal</h2>
+                                  <div class="flex items-center gap-2 text-base-300 ml-auto">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" style="font-size:0.8em;" width="1em" height="1em" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" rx="2"/></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6L6 18M6 6l12 12"/></svg>
+                                  </div>
+                                </div>
+                                <div class="rich-text info-panel-lines glossy-75 p-4 font-medium" data-v-ddaa91ec>
+                                  <p>Образование: <span class="g">ГБПОУ «КАИТ №20»</span>, факультет <span class="b">«Применение решений с использованием искусственного интеллекта»</span>, год окончания: <span class="y">2027</span>.</p>
+                                  <p>Специализация: <span class="p">интеграция LLM в бэкенд-сервисы</span>, автоматизация анализа инцидентов, проектирование <span class="a">Telegram и Slack-ботов</span>, валидация ответов нейросетей против галлюцинаций.</p>
+                                  <p>Цель: получение позиции стажёра <span class="r">ИИ-DevOps / AI-инженера</span> для автоматизации разработки, контейнеризации сервисов и настройки CI/CD-пайплайнов.</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <!-- Tech Stack Section -->
+                  <section class="container page-section">
+                    <div class="mx-auto mb-8 text-center lg:w-8/12">
+                      <h2 class="title-2">Технологии и инструменты, с которыми я <span class="text-primary transition-colors">работаю</span></h2>
+                    </div>
+                    <div class="light-streak relative flex justify-center py-24">
+                      <div class="w-full sm:w-10/12 md:w-11/12">
+                        <div class="flex h-full flex-col overflow-hidden rounded border border-base-300">
+                          <div class="glossy-25 flex h-10 min-h-10 items-center gap-4 border-b border-base-300 px-4">
+                            <div class="cursor-default font-body text-sm font-medium tracking-normal text-neutral lowercase">tech-stack</div>
+                            <div class="flex items-center gap-2 text-base-300 ml-auto">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14"/></svg>
+                              <svg xmlns="http://www.w3.org/2000/svg" style="font-size:0.8em;" width="1em" height="1em" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" rx="2"/></svg>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6L6 18M6 6l12 12"/></svg>
+                            </div>
+                          </div>
+                          <div class="grid grid-cols-2 gap-3 glossy-25 p-6 sm:grid-cols-3 md:grid-cols-4">
+                            <div class="rounded border border-base-300/60 bg-base-100/40 p-4 text-center transition-colors hover:border-primary">
+                              <div class="font-display text-base font-bold text-neutral">Python & FastAPI</div>
+                              <div class="mt-1 text-xs text-base-content">Backend & Async API</div>
+                            </div>
+                            <div class="rounded border border-base-300/60 bg-base-100/40 p-4 text-center transition-colors hover:border-primary">
+                              <div class="font-display text-base font-bold text-neutral">C# / C++ / React</div>
+                              <div class="mt-1 text-xs text-base-content">Programming Languages</div>
+                            </div>
+                            <div class="rounded border border-base-300/60 bg-base-100/40 p-4 text-center transition-colors hover:border-primary">
+                              <div class="font-display text-base font-bold text-neutral">OpenAI GPT-4o</div>
+                              <div class="mt-1 text-xs text-base-content">LLM Integration</div>
+                            </div>
+                            <div class="rounded border border-base-300/60 bg-base-100/40 p-4 text-center transition-colors hover:border-primary">
+                              <div class="font-display text-base font-bold text-neutral">Claude & Gemini API</div>
+                              <div class="mt-1 text-xs text-base-content">Anthropic & Google AI</div>
+                            </div>
+                            <div class="rounded border border-base-300/60 bg-base-100/40 p-4 text-center transition-colors hover:border-primary">
+                              <div class="font-display text-base font-bold text-neutral">RAG-пайплайны</div>
+                              <div class="mt-1 text-xs text-base-content">Anti-Hallucination</div>
+                            </div>
+                            <div class="rounded border border-base-300/60 bg-base-100/40 p-4 text-center transition-colors hover:border-primary">
+                              <div class="font-display text-base font-bold text-neutral">Docker & Compose</div>
+                              <div class="mt-1 text-xs text-base-content">Контейнеризация</div>
+                            </div>
+                            <div class="rounded border border-base-300/60 bg-base-100/40 p-4 text-center transition-colors hover:border-primary">
+                              <div class="font-display text-base font-bold text-neutral">Kubernetes</div>
+                              <div class="mt-1 text-xs text-base-content">Container Orchestration</div>
+                            </div>
+                            <div class="rounded border border-base-300/60 bg-base-100/40 p-4 text-center transition-colors hover:border-primary">
+                              <div class="font-display text-base font-bold text-neutral">GitHub Actions / GitLab CI</div>
+                              <div class="mt-1 text-xs text-base-content">CI/CD & Git</div>
+                            </div>
+                            <div class="rounded border border-base-300/60 bg-base-100/40 p-4 text-center transition-colors hover:border-primary">
+                              <div class="font-display text-base font-bold text-neutral">GCP / AWS / VPS</div>
+                              <div class="mt-1 text-xs text-base-content">Cloud Technologies</div>
+                            </div>
+                            <div class="rounded border border-base-300/60 bg-base-100/40 p-4 text-center transition-colors hover:border-primary">
+                              <div class="font-display text-base font-bold text-neutral">Linux & Nginx</div>
+                              <div class="mt-1 text-xs text-base-content">Server Infrastructure</div>
+                            </div>
+                            <div class="rounded border border-base-300/60 bg-base-100/40 p-4 text-center transition-colors hover:border-primary">
+                              <div class="font-display text-base font-bold text-neutral">NumPy & Pandas</div>
+                              <div class="mt-1 text-xs text-base-content">Data & Analytics</div>
+                            </div>
+                            <div class="rounded border border-base-300/60 bg-base-100/40 p-4 text-center transition-colors hover:border-primary">
+                              <div class="font-display text-base font-bold text-neutral">Telegram & Slack Bots</div>
+                              <div class="mt-1 text-xs text-base-content">ChatOps & Automation</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <div class="shared-testimonials-cta"></div>
+                </div>
+
+                <!-- ==================== VIEW: WORK ==================== -->
+                <div id="view-work" data-view="work" class="spa-view pb-16 md:pb-32">
+                  <section>
+                    <div class="relative container flex height-inner-frame flex-col items-center justify-center gap-6 text-center text-balance">
+                      <span class="text-xs font-medium tracking-wider uppercase">Проекты и Open Source</span>
+                      <h1 class="title-1 lg:w-10/12">Мои разработки в <span class="text-primary transition-colors">AI и DevOps</span></h1>
+                      <p class="w-11/12 md:w-10/12 lg:w-6/12 2xl:w-5/12">CLI-утилиты для анализа инцидентов, сервисы на FastAPI с RAG-валидацией, аналитические боты для Telegram/Slack и инфраструктура CI/CD.</p>
+                      <div class="scroll-line absolute bottom-6 h-24"></div>
+                    </div>
+                  </section>
+
+                  <section class="py-16">
+                    <div class="container">
+                      <div class="light-streak relative flex justify-center py-24">
+                        <div id="work-projects-list" class="projects-list w-full max-w-5xl flex flex-col gap-12"></div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <div class="shared-testimonials-cta"></div>
+                </div>
+
+                <!-- ==================== VIEW: ACHIEVEMENTS (SKILLS & MILESTONES) ==================== -->
+                <div id="view-achievements" data-view="achievements" class="spa-view pb-16 md:pb-32">
+                  <section>
+                    <div class="relative container flex height-inner-frame flex-col items-center justify-center gap-6 text-center text-balance">
+                      <span class="text-xs font-medium tracking-wider uppercase">Компетенции и опыт</span>
+                      <h1 class="title-1 lg:w-10/12">Навыки, стек и <span class="text-primary transition-colors">достижения</span></h1>
+                      <p class="w-11/12 md:w-10/12 lg:w-6/12 2xl:w-5/12">Полный перечень моих технических компетенций, разработанных сервисов, навыков работы с LLM/RAG, облаками и CI/CD-инфраструктурой.</p>
+                      <div class="scroll-line absolute bottom-6 h-24"></div>
+                    </div>
+                  </section>
+
+                  <section class="page-section">
+                    <div class="container flex flex-col gap-16">
+                      <div class="flex flex-col items-start justify-between gap-8 lg:flex-row lg:gap-4">
+                        <div id="achievement-filters" class="flex flex-wrap justify-center gap-2">
+                          <button data-filter="open-source" class="achievement-filter-btn btn btn-sm flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" style="font-size:1.25em;" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m18 16l4-4l-4-4M6 8l-4 4l4 4m8.5-12l-5 16"/></svg> open-source
+                          </button>
+                          <button data-filter="ai-ml" class="achievement-filter-btn btn btn-sm flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" style="font-size:1.25em;" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m15.477 12.89l1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></g></svg> ai-ml
+                          </button>
+                          <button data-filter="devops" class="achievement-filter-btn btn btn-sm flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" style="font-size:1.25em;" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5M10 9H8m8 4H8m8 4H8"/></g></svg> devops-cloud
+                          </button>
+                          <button data-filter="education" class="achievement-filter-btn btn btn-sm flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" style="font-size:1.25em;" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 14.66V17a1 1 0 0 1-1 1a2 2 0 0 0-2 2v2m7-7.34V17a1 1 0 0 0 1 1a2 2 0 0 1 2 2v2m.916-12H19.5A2.5 2.5 0 0 0 22 7.5V5a1 1 0 0 0-1-1h-3M4 22h16"/><path d="M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z"/><path d="M6.084 10H4.5A2.5 2.5 0 0 1 2 7.5V5a1 1 0 0 1 1-1h3"/></g></svg> образование-и-языки
+                          </button>
+                        </div>
+                        <div id="achievement-filter-status" class="hidden items-center gap-4 text-sm">
+                          <span id="achievement-count-text">Показаны все элементы</span>
+                          <button id="achievement-reset-btn" class="btn btn-sm">сбросить</button>
+                        </div>
+                      </div>
+                      <ul id="achievements-grid" class="grid grid-cols-1 items-start gap-4 md:grid-cols-2 lg:grid-cols-4"></ul>
+                    </div>
+                  </section>
+
+                  <div class="shared-testimonials-cta"></div>
+                </div>
+
+                <!-- ==================== VIEW: CONTACT ==================== -->
+                <div id="view-contact" data-view="contact" class="spa-view pb-16 md:pb-32">
+                  <section>
+                    <div class="relative container flex height-inner-frame flex-col items-center justify-center gap-6 text-center text-balance">
+                      <span class="text-xs font-medium tracking-wider uppercase">Контакты</span>
+                      <h1 class="title-1 lg:w-10/12">Обсудим <span class="text-primary transition-colors">сотрудничество</span> или стажировку?</h1>
+                      <p class="w-11/12 md:w-10/12 lg:w-6/12 2xl:w-5/12">Свяжитесь со мной напрямую по телефону <a href="tel:+79776491768" class="text-primary underline">+7 (977)-649-17-68</a>, по почте <a href="mailto:ilyaboztech@gmail.com" class="text-primary underline">ilyaboztech@gmail.com</a> или через форму ниже.</p>
+                      <div class="scroll-line absolute bottom-6 h-24"></div>
+                    </div>
+                  </section>
+
+                  <section class="page-section">
+                    <div class="container">
+                      <div class="light-streak relative flex justify-center py-24" id="form-streak">
+                        <div class="w-full md:max-w-lg lg:max-w-2xl">
+                          <div class="flex h-full flex-col overflow-hidden rounded border border-base-300">
+                            <div class="glossy-25 flex h-10 min-h-10 items-center gap-4 border-b border-base-300 px-4">
+                              <h2 class="cursor-default font-body text-sm font-medium tracking-normal text-neutral lowercase">write-me</h2>
+                              <div class="flex items-center gap-2 text-base-300 ml-auto">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" style="font-size:0.8em;" width="1em" height="1em" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" rx="2"/></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6L6 18M6 6l12 12"/></svg>
+                              </div>
+                            </div>
+                            <div class="glossy-25 p-6 sm:p-8">
+                              <form id="contact-form" class="contact-form flex flex-col gap-8 md:gap-8" novalidate>
+                                <div class="relative text-sm font-medium">
+                                  <div class="absolute top-0 left-0">01</div>
+                                  <div class="control-wrapper">
+                                    <label class="control-label" for="name">ваше-имя<span class="text-error"> *</span></label>
+                                    <input id="name" type="text" required class="control-field control-input" name="name">
+                                  </div>
+                                </div>
+                                <div class="relative text-sm font-medium">
+                                  <div class="absolute top-0 left-0">02</div>
+                                  <div class="control-wrapper">
+                                    <label class="control-label" for="company">компания</label>
+                                    <input id="company" type="text" class="control-field control-input" name="company">
+                                  </div>
+                                </div>
+                                <div class="relative text-sm font-medium">
+                                  <div class="absolute top-0 left-0">03</div>
+                                  <div class="control-wrapper">
+                                    <label class="control-label" for="website">telegram-или-сайт</label>
+                                    <input id="website" type="text" class="control-field control-input" name="website">
+                                  </div>
+                                </div>
+                                <div class="relative text-sm font-medium">
+                                  <div class="absolute top-0 left-0">04</div>
+                                  <div class="control-wrapper">
+                                    <label class="control-label" for="email">email<span class="text-error"> *</span></label>
+                                    <input id="email" type="email" required class="control-field control-input" name="email">
+                                  </div>
+                                </div>
+                                <div class="relative text-sm font-medium">
+                                  <div class="absolute top-0 left-0">05</div>
+                                  <div class="control-wrapper">
+                                    <label class="control-label" for="message">сообщение<span class="text-error"> *</span></label>
+                                    <textarea id="message" required class="control-field control-textarea" rows="6" name="message"></textarea>
+                                  </div>
+                                </div>
+                                <div class="control-wrapper">
+                                  <label class="flex cursor-pointer items-start gap-3">
+                                    <input id="acceptance" type="checkbox" required class="control-checkbox" name="acceptance" value="true">
+                                    <span class="mt-0.5 block w-full text-sm text-neutral"><p>Согласен на обработку контактных данных для обратной связи</p></span>
+                                  </label>
+                                </div>
+                                <div id="contact-feedback" class="hidden rounded border border-primary p-4 text-sm text-primary">
+                                  Спасибо! Ваше сообщение подготовлено. Вы также можете написать напрямую на ilyaboztech@gmail.com.
+                                </div>
+                                <div class="flex flex-wrap items-center gap-4 justify-start">
+                                  <button type="submit" class="btn btn-main">
+                                    <span class="overflow-hidden">отправить-сообщение</span>
+                                    <span class="flex items-center overflow-hidden">
+                                      <svg xmlns="http://www.w3.org/2000/svg" style="font-size:1.125em;" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m22 7l-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect width="20" height="16" x="2" y="4" rx="2"/></g></svg>
+                                    </span>
+                                  </button>
+                                  <a href="mailto:ilyaboztech@gmail.com" class="btn btn-sm">ilyaboztech@gmail.com</a>
+                                  <a href="tel:+79776491768" class="btn btn-sm">+7 (977)-649-17-68</a>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+
+                <!-- ==================== VIEW: WORK DETAIL (CASE STUDY) ==================== -->
+                <div id="view-work-detail" data-view="work-detail" class="spa-view">
+                  <article id="case-study-article" class="pb-16 md:pb-32" data-v-5ebea7f2></article>
+                </div>
+              </main>
+
+              <!-- Footer -->
+              <footer class="border-t border-base-300 glossy-25 py-10 font-medium lg:py-20">
+                <div class="container flex max-w-screen-2xl flex-col gap-20 lg:w-10/12 lg:gap-40">
+                  <nav class="flex flex-col items-center gap-10 lg:flex-row lg:justify-between" aria-label="Footer Menu">
+                    <a href="#home" data-route="home" class="router-link-active animate-logo flex flex-nowrap items-center gap-2" aria-label="Боженко Илья | AI-DevOps & AI-Инженер">
+                      <svg viewBox="0 0 18 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="logo-monogram svg-origin-center h-6 text-primary">
+                        <g class="logo-m-brackets">
+                          <path d="m9 3.104 3.225 3.224a1.73 1.73 0 0 0 2.445 0l.23-.229a.648.648 0 0 0 0-.917L10.221.506a1.729 1.729 0 0 0-2.444 0l-3.151 3.15a.648.648 0 0 0 .243 1.07l1.341.473c.314.11.663.03.898-.205z"></path>
+                          <path d="m9 14.896-3.225-3.225a1.729 1.729 0 0 0-2.444 0l-.23.23a.648.648 0 0 0 0 .916l4.677 4.677c.675.675 1.77.675 2.444 0l3.15-3.15a.648.648 0 0 0-.242-1.07l-1.341-.473a.864.864 0 0 0-.898.205L9 14.896z"></path>
+                        </g>
+                        <path class="logo-m-slash" d="M2.665 5.339a.54.54 0 0 0-.69.33 2.161 2.161 0 0 0 1.322 2.756l12.038 4.236a.54.54 0 0 0 .69-.33 2.161 2.161 0 0 0-1.322-2.756z"></path>
+                      </svg>
+                      <span class="font-display text-base font-bold tracking-tight text-neutral lowercase">илья<span class="text-primary">&lt;боженко&gt;</span></span>
+                    </a>
+                    <ul class="flex flex-col items-center gap-4 sm:flex-row">
+                      <li><a href="#about" data-route="about" class="py-2 lowercase transition-colors hover:text-neutral">Обо мне</a></li>
+                      <li><a href="#work" data-route="work" class="py-2 lowercase transition-colors hover:text-neutral">Проекты</a></li>
+                      <li><a href="#achievements" data-route="achievements" class="py-2 lowercase transition-colors hover:text-neutral">Навыки и опыт</a></li>
+                      <li><a href="#contact" data-route="contact" class="py-2 lowercase transition-colors hover:text-neutral">Контакты</a></li>
+                    </ul>
+                  </nav>
+                  <div class="flex flex-col items-center gap-4 text-sm lg:flex-row lg:justify-between">
+                    <div class="text-center">© 2025–2026 Боженко Илья — Инженер по ИИ-автоматизации и DevOps • Москва, Россия</div>
+                    <ul class="flex flex-wrap justify-center gap-4">
+                      <li><a href="tel:+79776491768" class="py-2 transition-colors hover:text-neutral">+7 (977)-649-17-68</a></li>
+                      <li><a href="mailto:ilyaboztech@gmail.com" class="py-2 lowercase transition-colors hover:text-neutral">ilyaboztech@gmail.com</a></li>
+                      <li><a href="https://github.com/Spizhy" rel="noopener noreferrer" target="_blank" class="py-2 transition-colors hover:text-neutral">github.com/Spizhy</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </footer>
+            </div>
+          </div>
+        </div>
+
+        <!-- Widget: Dashboard ("Find anything") -->
+        <div id="widget-dashboard" class="z-20 hidden overflow-x-hidden overflow-y-scroll border-base-300 glossy-90 p-8 [grid-area:content]">
+          <div class="container flex min-h-full flex-col items-center justify-center gap-12">
+            <h2 class="title-2 text-center">Быстрая <span class="text-primary transition-colors">навигация</span></h2>
+            <nav aria-label="Dashboard Navigation" class="w-full max-w-4xl">
+              <ul class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+                <li>
+                  <a href="#home" data-route="home" data-dash-theme="darkGreen" class="dash-card flex h-full flex-col gap-3 rounded border border-base-300 glossy-25 p-6 transition-colors hover:border-primary">
+                    <div class="flex items-center gap-2 text-lg font-medium text-neutral lowercase">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="text-primary" width="1.2em" height="1.2em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></g></svg>
+                      <span>Главная</span>
+                    </div>
+                    <p class="text-sm">Обзор профиля, ключевые проекты и контакты</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#about" data-route="about" data-dash-theme="darkBlue" class="dash-card flex h-full flex-col gap-3 rounded border border-base-300 glossy-25 p-6 transition-colors hover:border-primary">
+                    <div class="flex items-center gap-2 text-lg font-medium text-neutral lowercase">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="text-primary" width="1.2em" height="1.2em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></g></svg>
+                      <span>Обо мне</span>
+                    </div>
+                    <p class="text-sm">Опыт работы, КАИТ №20 и полный технологический стек</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#work" data-route="work" data-dash-theme="darkRed" class="dash-card flex h-full flex-col gap-3 rounded border border-base-300 glossy-25 p-6 transition-colors hover:border-primary">
+                    <div class="flex items-center gap-2 text-lg font-medium text-neutral lowercase">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="text-primary" width="1.2em" height="1.2em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 5a2 2 0 0 1 2 2v8.526a2 2 0 0 0 .212.897l1.068 2.127a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45l1.068-2.127A2 2 0 0 0 4 15.526V7a2 2 0 0 1 2-2zm2.054 10.987H3.946"/></svg>
+                      <span>Проекты</span>
+                    </div>
+                    <p class="text-sm">git-incident-pilot, omni-brand-copilot, market-radar-bot, triage-flow-worker</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#achievements" data-route="achievements" data-dash-theme="darkYellow" class="dash-card flex h-full flex-col gap-3 rounded border border-base-300 glossy-25 p-6 transition-colors hover:border-primary">
+                    <div class="flex items-center gap-2 text-lg font-medium text-neutral lowercase">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="text-primary" width="1.2em" height="1.2em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M10 14.66V17a1 1 0 0 1-1 1a2 2 0 0 0-2 2v2m7-7.34V17a1 1 0 0 0 1 1a2 2 0 0 1 2 2v2m.916-12H19.5A2.5 2.5 0 0 0 22 7.5V5a1 1 0 0 0-1-1h-3M4 22h16"/><path d="M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z"/><path d="M6.084 10H4.5A2.5 2.5 0 0 1 2 7.5V5a1 1 0 0 1 1-1h3"/></g></svg>
+                      <span>Навыки и опыт</span>
+                    </div>
+                    <p class="text-sm">Фильтр по компетенциям: AI/ML, DevOps, Cloud, Open Source</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#contact" data-route="contact" data-dash-theme="darkAqua" class="dash-card flex h-full flex-col gap-3 rounded border border-base-300 glossy-25 p-6 transition-colors hover:border-primary">
+                    <div class="flex items-center gap-2 text-lg font-medium text-neutral lowercase">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="text-primary" width="1.2em" height="1.2em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m22 7l-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect width="20" height="16" x="2" y="4" rx="2"/></g></svg>
+                      <span>Контакты</span>
+                    </div>
+                    <p class="text-sm">+7 (977)-649-17-68 • ilyaboztech@gmail.com</p>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <!-- Widget: Popup on Close Window -->
+        <div id="widget-popup-close" class="z-20 hidden items-center justify-center border-base-300 glossy-90 p-8 [grid-area:content]">
+          <div class="w-full max-w-md rounded border border-base-300 bg-base-100">
+            <div class="glossy-90 flex h-10 min-h-10 items-center justify-between gap-4 border-b border-base-300 px-4">
+              <span class="font-body text-sm font-medium text-neutral lowercase">stay-in-touch</span>
+              <button id="popup-close-dismiss" class="text-base-300 hover:text-neutral" aria-label="Close Popup">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 6L6 18M6 6l12 12"/></svg>
+              </button>
+            </div>
+            <div class="flex flex-col gap-6 p-6 text-center">
+              <p class="text-neutral">Уже уходите? Буду рад пообщаться по поводу стажировки или совместных проектов!</p>
+              <div class="flex flex-wrap justify-center gap-2">
+                <a href="https://github.com/Spizhy" target="_blank" rel="noopener noreferrer" class="btn btn-main btn-sm">github.com/Spizhy</a>
+                <a href="mailto:ilyaboztech@gmail.com" class="btn btn-main btn-sm">ilyaboztech@gmail.com</a>
+                <a href="tel:+79776491768" class="btn btn-main btn-sm">+7 (977)-649-17-68</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Status Bar -->
+        <div class="grid grid-cols-subgrid items-center border-t border-base-300 text-sm font-medium glossy-25 [grid-area:bottom]">
+          <div class="flex h-full items-center justify-center border-r border-base-300">
+            <button id="dashboard-switch" class="tooltip flex size-full w-full items-center justify-center rounded-bl-[3px] border border-transparent bg-primary/50 font-medium text-base-100 lowercase transition-colors hover:border-primary hover:text-primary hidden md:flex" aria-label="Быстрая навигация" data-tip="навигация">
+              <svg xmlns="http://www.w3.org/2000/svg" style="font-size:1.25em;" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m21 21l-4.34-4.34"/><circle cx="11" cy="11" r="8"/></g></svg>
+            </button>
+            <div class="aspect-square h-2 rounded-full bg-primary md:hidden"></div>
+          </div>
+
+          <aside class="col-span-2 grid h-full grid-cols-1 items-center gap-4 px-4 md:col-span-1 md:grid-cols-2 lg:grid-cols-[2fr_3fr_2fr] xl:grid-cols-[1fr_2fr_1fr] 2xl:grid-cols-[2fr_3fr_2fr]">
+            <!-- Breadcrumbs (Left) -->
+            <nav id="widget-breadcrumbs" aria-label="Breadcrumbs" class="hidden lowercase md:block">
+              <ol id="breadcrumbs-list" class="flex">
+                <li class="flex">
+                  <span class="px-1 opacity-50">/</span>
+                  <a href="#home" data-route="home" class="text-primary transition-colors hover:text-neutral">Home</a>
+                  <span class="px-1 opacity-50">/</span>
+                </li>
+              </ol>
+            </nav>
+
+            <!-- Middle: WidgetLocation OR WidgetWorkSections -->
+            <div id="widget-location" class="hidden justify-center gap-4 justify-self-center lowercase lg:flex">
+              <span>Москва, Россия 🇷🇺</span>
+              <span class="opacity-50">//</span>
+              <span id="local-time-display">Местное время 15:30 ☀️</span>
+            </div>
+
+            <div id="widget-work-sections" class="hidden justify-center justify-self-center lowercase lg:flex">
+              <div class="flex">
+                <span class="px-1 opacity-50">/</span>
+                <button data-scroll-section="start" class="work-sec-btn text-primary transition-colors hover:text-neutral">start</button>
+              </div>
+              <div class="flex">
+                <span class="px-1 opacity-50">/</span>
+                <button data-scroll-section="project" class="work-sec-btn transition-colors hover:text-neutral">project</button>
+              </div>
+              <div class="flex">
+                <span class="px-1 opacity-50">/</span>
+                <button data-scroll-section="showcase" class="work-sec-btn transition-colors hover:text-neutral">showcase</button>
+              </div>
+              <div class="flex">
+                <span class="px-1 opacity-50">/</span>
+                <button data-scroll-section="up-next" class="work-sec-btn transition-colors hover:text-neutral">up-next</button>
+              </div>
+              <div class="flex">
+                <span class="px-1 opacity-50">/</span>
+                <button data-scroll-section="contact-me" class="work-sec-btn transition-colors hover:text-neutral">contact-me</button>
+                <span class="px-1 opacity-50">/</span>
+              </div>
+            </div>
+
+            <!-- Social Profiles + CTA (Right) -->
+            <div class="flex h-full items-center gap-4 justify-self-end md:col-start-2 lg:col-start-3">
+              <div class="flex h-full items-center hidden 2xl:flex" aria-label="Social Profiles">
+                <a href="https://github.com/Spizhy" rel="noopener noreferrer" target="_blank" aria-label="github.com/Spizhy" class="flex h-full items-center px-2 transition-[scale,color] hover:scale-125 hover:text-neutral"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12c0 5.303 3.438 9.8 8.205 11.385c.6.113.82-.258.82-.577c0-.285-.01-1.04-.015-2.04c-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729c1.205.084 1.838 1.236 1.838 1.236c1.07 1.835 2.809 1.305 3.495.998c.108-.776.417-1.305.76-1.605c-2.665-.3-5.466-1.332-5.466-5.93c0-1.31.465-2.38 1.235-3.22c-.135-.303-.54-1.523.105-3.176c0 0 1.005-.322 3.3 1.23c.96-.267 1.98-.399 3-.405c1.02.006 2.04.138 3 .405c2.28-1.552 3.285-1.23 3.285-1.23c.645 1.653.24 2.873.12 3.176c.765.84 1.23 1.91 1.23 3.22c0 4.61-2.805 5.625-5.475 5.92c.42.36.81 1.096.81 2.22c0 1.606-.015 2.896-.015 3.286c0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+                <a href="mailto:ilyaboztech@gmail.com" aria-label="ilyaboztech@gmail.com" class="flex h-full items-center px-2 transition-[scale,color] hover:scale-125 hover:text-neutral"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m22 7l-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect width="20" height="16" x="2" y="4" rx="2"/></g></svg></a>
+                <a href="tel:+79776491768" aria-label="+7 (977)-649-17-68" class="flex h-full items-center px-2 transition-[scale,color] hover:scale-125 hover:text-neutral"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 16.92v3a2 2 0 0 1-2.18 2a19.79 19.79 0 0 1-8.63-3.07a19.5 19.5 0 0 1-6-6a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+              </div>
+              <a href="#contact" data-route="contact" class="btn btn-main btn-sm" role="button">
+                <span data-gsap="btn-label" class="overflow-hidden">связаться-со-мной</span>
+                <span class="flex items-center overflow-hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" style="font-size:1.125em;" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7-7l7 7l-7 7"/></svg>
+                </span>
+              </a>
+            </div>
+          </aside>
+        </div>
+      </div>
+
+      <!-- Intro Loading Overlay -->
+      <div id="intro-overlay" class="fixed inset-0 z-40 flex items-center justify-center bg-base-100 transition-opacity duration-700">
+        <div id="intro-logo" class="relative scale-115 opacity-0 transition-all duration-700">
+          <svg viewBox="0 0 18 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="logo-monogram svg-origin-center size-32 text-primary lg:size-48">
+            <g class="logo-m-brackets">
+              <path d="m9 3.104 3.225 3.224a1.73 1.73 0 0 0 2.445 0l.23-.229a.648.648 0 0 0 0-.917L10.221.506a1.729 1.729 0 0 0-2.444 0l-3.151 3.15a.648.648 0 0 0 .243 1.07l1.341.473c.314.11.663.03.898-.205z"></path>
+              <path d="m9 14.896-3.225-3.225a1.729 1.729 0 0 0-2.444 0l-.23.23a.648.648 0 0 0 0 .916l4.677 4.677c.675.675 1.77.675 2.444 0l3.15-3.15a.648.648 0 0 0-.242-1.07l-1.341-.473a.864.864 0 0 0-.898.205L9 14.896z"></path>
+            </g>
+            <path class="logo-m-slash" d="M2.665 5.339a.54.54 0 0 0-.69.33 2.161 2.161 0 0 0 1.322 2.756l12.038 4.236a.54.54 0 0 0 .69-.33 2.161 2.161 0 0 0-1.322-2.756z"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
