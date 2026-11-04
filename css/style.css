@@ -124,3 +124,53 @@ footer .logo-monogram {
     margin: 0 !important;
   }
 }
+
+/* Profile Card Photo & Overlay */
+.profile-card-media {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  overflow: hidden;
+  background-color: #0f0f0f;
+  user-select: none;
+}
+.profile-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  user-select: none;
+  pointer-events: none;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.draggable-panel:hover .profile-card-media img {
+  transform: scale(1.04);
+}
+.profile-card-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.5rem 0.85rem 0.65rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.90) 0%, rgba(0, 0, 0, 0.45) 60%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  pointer-events: none;
+}
+.profile-card-name {
+  font-family: var(--font-headings);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+  line-height: 1.2;
+}
+.profile-card-role {
+  font-family: var(--font-body);
+  font-size: 0.725rem;
+  font-weight: 600;
+  color: var(--theme-primary);
+  margin-top: 0.2rem;
+  line-height: 1.2;
+}
