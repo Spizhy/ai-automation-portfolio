@@ -43,45 +43,26 @@
   // ==================== ДАННЫЕ: ПРОЕКТЫ ====================
   const PROJECTS = [
     {
-      slug: 'git-incident-pilot',
-      title: 'git-incident-pilot',
-      year: '2025–2026',
-      deckBg: '#101820',
-      cover: makeTerminalCover('git-incident-pilot', 'CLI AI-Incident Resolver', '#00dc82', [
-        'git-incident-pilot analyze --log /var/log/app/error.log',
-        '[LLM API] Разбор стектрейса и локализация причины сбоя...',
-        '[Root Cause] Timeout в пуле соединений при пиковой нагрузке',
-        '[Git Patch] Сформирован коммит fix(pool): retry & backoff policy',
-        '[CI Check] Тесты пройдены успешно, ветка готова к merge'
-      ]),
-      tags: ['python', 'cli', 'llm-api', 'git', 'devops'],
-      client: 'Open Source / Проектная разработка',
-      role: 'Инженер по ИИ-автоматизации и DevOps',
-      websiteUrl: 'https://github.com/Spizhy',
-      summary: 'CLI-инструмент для автоматического разбора логов инцидентов и формирования коммитов с исправлениями через LLM API.',
+      slug: 'ritm',
+      title: 'РИТМ',
+      year: '2026',
+      deckBg: '#30100d',
+      cover: 'assets/images/ritm-hero.jpg',
+      tags: ['telegram mini app', 'react', 'typescript', 'python', 'aiogram'],
+      client: 'Командный проект',
+      role: 'Соавтор',
+      websiteUrl: 'https://github.com/Spizhy/ritm',
+      summary: 'Telegram Mini App для учебных групп. Расписание, отмены занятий и перекличка в одном месте.',
       description: [
-        'Разработал CLI-утилиту <span class="g">git-incident-pilot</span> для автоматического анализа логов сбоев, стектрейсов и ошибок пайплайнов.',
-        'Инструмент обращается к <span class="b">LLM API (OpenAI GPT-4o / Claude / Gemini)</span>, сопоставляет лог инцидента с историей изменений в репозитории <span class="y">Git</span> и автоматически формирует патч и осмысленный коммит с исправлением.',
-        'Сокращает время первичной диагностики (<span class="r">MTTR</span>) и легко встраивается в <span class="p">GitHub Actions</span> и <span class="a">GitLab CI</span>.'
+        'Сайт-презентация показывает, как работают утренний дайджест и перекличка, через интерактивные симуляции.',
+        '<a class="text-primary underline" href="https://github.com/Spizhy/ritm-tma">Telegram Mini App</a> использует React, TypeScript, Vite и Tailwind CSS.',
+        '<a class="text-primary underline" href="https://github.com/Spizhy/ritm-bot">Бот для пилотного тестирования</a> собирает заявки на Python и aiogram и хранит их в SQLite.'
       ],
       showcase: [
         {
-          src: makeTerminalCover('git-incident-pilot', '1. Парсинг логов и контекста Git', '#00dc82', [
-            '$ git-incident-pilot inspect --since "2 hours ago"',
-            '-> Сбор логов контейнеров Docker и последних diff коммитов',
-            '-> Фильтрация шума и выделение критических исключений',
-            '-> Формирование структурированного промпта для LLM API'
-          ]),
-          alt: 'Парсинг логов и контекста Git'
-        },
-        {
-          src: makeTerminalCover('git-incident-pilot', '2. Генерация патча и авто-коммита', '#38bdf8', [
-            '$ git-incident-pilot fix --auto-commit --model gpt-4o',
-            '-> Валидация предложенного диффа и синтаксиса кода',
-            '-> Создание ветки hotfix/incident-auto-patch',
-            '-> Commit: "fix: handle async timeout in worker queue"'
-          ]),
-          alt: 'Генерация патча и авто-коммита'
+          src: 'assets/images/ritm-hero.jpg',
+          filename: 'ritm-hero.jpg',
+          alt: 'Обложка сайта проекта РИТМ'
         }
       ]
     },
@@ -224,17 +205,13 @@
   // ==================== ДАННЫЕ: НАВЫКИ, ОПЫТ И ДОСТИЖЕНИЯ ====================
   const ACHIEVEMENTS = [
     {
-      title: 'git-incident-pilot',
+      title: 'РИТМ',
       category: 'open-source',
-      year: '2025–2026',
-      org: 'CLI • LLM API • Git',
-      project: 'Автоматический разбор логов инцидентов и формирование коммитов с исправлениями через LLM API',
-      image: makeTerminalCover('git-incident-pilot', 'Open Source CLI', '#00dc82', [
-        'Анализ логов инцидентов',
-        'Генерация Git-коммитов с фиксом',
-        'Интеграция с LLM API'
-      ]),
-      url: 'https://github.com/Spizhy'
+      year: '2026',
+      org: 'Telegram Mini App • React • aiogram',
+      project: 'Расписание, отмены занятий и перекличка для учебных групп',
+      image: 'assets/images/ritm-hero.jpg',
+      url: 'https://github.com/Spizhy/ritm'
     },
     {
       title: 'omni-brand-copilot',
@@ -377,8 +354,7 @@
       badge: '⚙️',
       link: 'https://github.com/Spizhy',
       paragraphs: [
-        'Автоматизирую <span class="g">процессы разработки и доставки кода</span> с помощью <span class="b">Docker, Docker Compose, Kubernetes</span> и пайплайнов <span class="p">GitHub Actions / GitLab CI</span>.',
-        'Создаю инструменты вроде <span class="r">git-incident-pilot</span>, которые объединяют классический DevOps с возможностями <span class="y">LLM API</span> для мгновенного разбора логов и формирования коммитов с исправлениями.'
+        'Автоматизирую <span class="g">процессы разработки и доставки кода</span> с помощью <span class="b">Docker, Docker Compose, Kubernetes</span> и пайплайнов <span class="p">GitHub Actions / GitLab CI</span>.'
       ]
     },
     {
@@ -588,7 +564,7 @@
             <h2 class="title-2">Ключевые направления <span class="text-primary transition-colors">специализации</span></h2>
           </div>
         </div>
-        <div class="light-streak relative py-24">
+        <div class="relative py-24">
           <div class="container">
             <div class="testimonial-carousel" data-carousel-instance="${instanceIndex}">
               <div class="overflow-hidden">
@@ -627,12 +603,10 @@
               </div>
             </div>
             <div class="glossy-25 flex flex-col items-center gap-8 px-6 py-12 text-center sm:px-12 md:py-16">
-              <div class="relative">
-                <div class="flex size-24 items-center justify-center overflow-hidden rounded-full border-2 border-primary bg-brand-green text-base-100 font-display text-2xl font-extrabold">
-                  БИ
-                </div>
-                <span class="absolute right-0 bottom-0 flex size-8 items-center justify-center rounded-full border border-base-300 bg-base-100 text-lg shadow">👋</span>
-              </div>
+              <p class="glossy-75 flex items-center gap-2 rounded-full border border-base-300 px-4 py-2 text-sm font-medium text-neutral">
+                <span class="h-2 shrink-0 aspect-square rounded-full bg-brand-green" aria-hidden="true"></span>
+                Открыт к стажировке
+              </p>
               <div class="flex max-w-2xl flex-col items-center gap-4">
                 <h2 class="title-2 text-balance">Готов к решению задач <span class="text-primary transition-colors">AI-DevOps</span> в вашей команде</h2>
                 <p class="text-balance">Ищете стажёра ИИ-DevOps / AI-инженера для автоматизации процессов разработки, настройки CI/CD и интеграции LLM-моделей? Свяжитесь со мной!</p>
@@ -811,7 +785,7 @@
         (shot, i) => `
       <div class="showcase-item overflow-hidden rounded border border-base-300 glossy-25" data-shot-index="${i + 1}">
         <div class="glossy-90 flex h-10 min-h-10 items-center justify-between border-b border-base-300 px-4">
-          <span class="font-body text-xs font-medium text-neutral lowercase">${project.slug}-0${i + 1}.svg</span>
+          <span class="font-body text-xs font-medium text-neutral lowercase">${shot.filename || `${project.slug}-0${i + 1}.svg`}</span>
           <div class="flex items-center gap-2 text-base-300">
             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14"/></svg>
             <svg xmlns="http://www.w3.org/2000/svg" style="font-size:0.8em;" width="1em" height="1em" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" rx="2"/></svg>
