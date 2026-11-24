@@ -523,7 +523,7 @@
   function createSharedTestimonialsAndCtaHTML(instanceIndex) {
     const slidesHTML = SPECIALIZATIONS.map(
       (item, idx) => `
-      <div class="embla__slide min-w-0 shrink-0 grow-0 basis-full pl-4 md:basis-10/12 lg:basis-8/12" data-slide-index="${idx}">
+      <div class="embla__slide" data-slide-index="${idx}">
         <div class="flex h-full flex-col overflow-hidden rounded border border-base-300">
           <div class="glossy-25 flex h-10 min-h-10 items-center gap-4 border-b border-base-300 px-4">
             <div class="cursor-default font-body text-sm font-medium tracking-normal text-neutral lowercase">${item.id}</div>
@@ -537,7 +537,7 @@
             <div class="rich-text info-panel-lines font-medium">
               ${item.paragraphs.map((p) => `<p>${p}</p>`).join('')}
             </div>
-            <div class="flex items-center justify-between gap-4 border-t border-base-300 pt-4">
+            <div class="flex flex-wrap items-center justify-between gap-4 border-t border-base-300 pt-4">
               <div class="flex items-center gap-3">
                 <div class="flex size-12 items-center justify-center rounded-full border border-base-300 bg-base-200 text-xl">${item.badge}</div>
                 <div>
@@ -568,7 +568,7 @@
           <div class="container">
             <div class="testimonial-carousel" data-carousel-instance="${instanceIndex}">
               <div class="overflow-hidden">
-                <div class="embla__container -ml-4 flex transition-transform duration-500 ease-out" style="transform: translate3d(0%, 0px, 0px);">
+                <div class="embla__container flex transition-transform duration-500 ease-out">
                   ${slidesHTML}
                 </div>
               </div>
@@ -642,18 +642,18 @@
       carousel.dataset.initialized = 'true';
 
       let currentIndex = 0;
-      const total = SPECIALIZATIONS.length;
       const track = carousel.querySelector('.embla__container');
+      const slides = track.querySelectorAll('.embla__slide');
+      const total = slides.length;
       const prevBtn = carousel.querySelector('.carousel-prev');
       const nextBtn = carousel.querySelector('.carousel-next');
       const bar = carousel.querySelector('.carousel-pagination-current');
 
       function updateCarousel() {
-        const slides = carousel.querySelectorAll('.embla__slide');
-        if (!slides.length) return;
-        const currentSlide = slides[currentIndex];
-        const offsetPx = currentSlide.offsetLeft;
-        track.style.transform = `translate3d(-${offsetPx}px, 0px, 0px)`;
+        track.style.transform = `translateX(${-currentIndex * 100}%)`;
+        slides.forEach((slide, index) => {
+          slide.inert = index !== currentIndex;
+        });
         if (bar) {
           bar.style.transform = `translateX(${currentIndex * 100}%)`;
         }
@@ -671,7 +671,7 @@
           updateCarousel();
         });
       }
-      window.addEventListener('resize', updateCarousel, { passive: true });
+      updateCarousel();
     });
   }
 
