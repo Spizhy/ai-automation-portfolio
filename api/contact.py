@@ -16,6 +16,7 @@ RECIPIENT = "ilyaboztech@gmail.com"
 LIMITS = {"name": 100, "company": 160, "website": 240, "email": 254, "message": 4000}
 budget = RequestBudget(limit=3, window=600)
 mail_budget = RequestBudget(limit=15, window=600)
+request_budget = RequestBudget(limit=30, window=60)
 
 
 def validate(data):
@@ -58,6 +59,9 @@ class handler(BaseHTTPRequestHandler):
             logging.warning("contact_rejected status=%d", code)
 
     def do_POST(self):
+        peer = self.headers.get("x-vercel-forwarded-for", self.client_address[0]).split(",")[0].strip()
+        if not request_budget.allow(peer, time.monotonic()):
+            return self.reply(429)
         if self.headers.get("Origin") != ORIGIN:
             return self.reply(403)
         if self.headers.get_content_type() != "application/json":
@@ -73,7 +77,6 @@ class handler(BaseHTTPRequestHandler):
         password = os.getenv("GMAIL_APP_PASSWORD")
         if not sender or not password:
             return self.reply(503)
-        peer = self.headers.get("x-vercel-forwarded-for", self.client_address[0]).split(",")[0].strip()
         now = time.monotonic()
         if not budget.allow(peer, now) or not mail_budget.allow("mail", now):
             return self.reply(429)

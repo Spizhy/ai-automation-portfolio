@@ -58,6 +58,21 @@ class SecurityTests(unittest.TestCase):
     def test_origin_required(self):
         self.assertEqual(self.request(contact.handler, "POST", "/api/contact")[0], 403)
 
+    def test_rejection_logged_without_personal_data(self):
+        with self.assertLogs(level="WARNING") as logs:
+            self.assertEqual(self.post(self.fields | {"acceptance": False}), 422)
+        self.assertIn("contact_rejected status=422", logs.output[0])
+        self.assertNotIn(self.fields["email"], logs.output[0])
+
+    def test_request_limit_returns_429(self):
+        with patch.object(contact, "request_budget", site.RequestBudget(limit=0)):
+            self.assertEqual(self.post(self.fields), 429)
+
+    def test_content_type(self):
+        status, _ = self.request(contact.handler, "POST", "/api/contact", "text",
+                                 {"Origin": contact.ORIGIN, "Content-Type": "text/plain"})
+        self.assertEqual(status, 415)
+
     def test_mail_not_configured(self):
         with patch.dict(os.environ, {"GMAIL_USER": "", "GMAIL_APP_PASSWORD": ""}):
             self.assertEqual(self.post(self.fields), 503)
