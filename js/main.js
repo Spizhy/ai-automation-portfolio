@@ -677,10 +677,9 @@
       function updateCarousel() {
         const slides = carousel.querySelectorAll('.embla__slide');
         if (!slides.length) return;
-        const slideWidthPct =
-          (slides[0].getBoundingClientRect().width / carousel.getBoundingClientRect().width) * 100;
-        const offset = -(currentIndex * slideWidthPct);
-        track.style.transform = `translate3d(${offset}%, 0px, 0px)`;
+        const currentSlide = slides[currentIndex];
+        const offsetPx = currentSlide.offsetLeft;
+        track.style.transform = `translate3d(-${offsetPx}px, 0px, 0px)`;
         if (bar) {
           bar.style.transform = `translateX(${currentIndex * 100}%)`;
         }
@@ -698,6 +697,7 @@
           updateCarousel();
         });
       }
+      window.addEventListener('resize', updateCarousel, { passive: true });
     });
   }
 
