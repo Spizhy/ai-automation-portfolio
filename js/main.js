@@ -1302,16 +1302,40 @@
     const feedback = document.getElementById('contact-feedback');
     if (!form) return;
 
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       if (!form.checkValidity()) {
         form.reportValidity();
         return;
       }
-      if (feedback) {
-        feedback.classList.remove('hidden');
+      const button = form.querySelector('[type="submit"]');
+      if (button.disabled) return;
+      button.disabled = true;
+      feedback.classList.remove('hidden');
+      feedback.textContent = 'Отправляем заявку…';
+      try {
+        const data = Object.fromEntries(new FormData(form));
+        data.acceptance = form.elements.acceptance.checked;
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        if (response.status === 204) {
+          feedback.textContent = 'Заявка отправлена. Спасибо!';
+          form.reset();
+        } else if (response.status === 429) {
+          feedback.textContent = 'Слишком много заявок. Попробуйте через 10 минут.';
+        } else if (response.status === 422 || response.status === 413) {
+          feedback.textContent = 'Проверьте адрес почты и длину полей. Сообщение — до 4000 символов.';
+        } else {
+          feedback.textContent = 'Отправка временно недоступна. Напишите на ilyaboztech@gmail.com.';
+        }
+      } catch {
+        feedback.textContent = 'Не удалось подтвердить доставку. Можно написать на ilyaboztech@gmail.com.';
+      } finally {
+        button.disabled = false;
       }
-      form.reset();
     });
   }
 

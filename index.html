@@ -563,35 +563,35 @@
                                   <div class="absolute top-0 left-0">01</div>
                                   <div class="control-wrapper">
                                     <label class="control-label" for="name">ваше-имя<span class="text-error"> *</span></label>
-                                    <input id="name" type="text" required class="control-field control-input" name="name">
+                                    <input id="name" type="text" required class="control-field control-input" name="name" maxlength="100">
                                   </div>
                                 </div>
                                 <div class="relative text-sm font-medium">
                                   <div class="absolute top-0 left-0">02</div>
                                   <div class="control-wrapper">
                                     <label class="control-label" for="company">компания</label>
-                                    <input id="company" type="text" class="control-field control-input" name="company">
+                                    <input id="company" type="text" class="control-field control-input" name="company" maxlength="160">
                                   </div>
                                 </div>
                                 <div class="relative text-sm font-medium">
                                   <div class="absolute top-0 left-0">03</div>
                                   <div class="control-wrapper">
                                     <label class="control-label" for="website">telegram-или-сайт</label>
-                                    <input id="website" type="text" class="control-field control-input" name="website">
+                                    <input id="website" type="text" class="control-field control-input" name="website" maxlength="240">
                                   </div>
                                 </div>
                                 <div class="relative text-sm font-medium">
                                   <div class="absolute top-0 left-0">04</div>
                                   <div class="control-wrapper">
                                     <label class="control-label" for="email">email<span class="text-error"> *</span></label>
-                                    <input id="email" type="email" required class="control-field control-input" name="email">
+                                    <input id="email" type="email" required class="control-field control-input" name="email" maxlength="254">
                                   </div>
                                 </div>
                                 <div class="relative text-sm font-medium">
                                   <div class="absolute top-0 left-0">05</div>
                                   <div class="control-wrapper">
                                     <label class="control-label" for="message">сообщение<span class="text-error"> *</span></label>
-                                    <textarea id="message" required class="control-field control-textarea" rows="6" name="message"></textarea>
+                                    <textarea id="message" required class="control-field control-textarea" rows="6" name="message" maxlength="4000"></textarea>
                                   </div>
                                 </div>
                                 <div class="control-wrapper">
@@ -600,8 +600,7 @@
                                     <span class="mt-0.5 block w-full text-sm text-neutral"><p>Согласен на обработку контактных данных для обратной связи</p></span>
                                   </label>
                                 </div>
-                                <div id="contact-feedback" class="hidden rounded border border-primary p-4 text-sm text-primary">
-                                  Спасибо! Ваше сообщение подготовлено. Вы также можете написать напрямую на ilyaboztech@gmail.com.
+                                <div id="contact-feedback" role="status" class="hidden rounded border border-primary p-4 text-sm text-primary">
                                 </div>
                                 <div class="flex flex-wrap items-center gap-4 justify-start">
                                   <button type="submit" class="btn btn-main">
