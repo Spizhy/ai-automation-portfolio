@@ -47,6 +47,20 @@ def build_message(fields, sender):
     return message
 
 
+def connect_mail():
+    context = ssl.create_default_context()
+    try:
+        return smtplib.SMTP_SSL("smtp.gmail.com", 465, timeout=5, context=context)
+    except (OSError, smtplib.SMTPServerDisconnected):
+        smtp = smtplib.SMTP("smtp.gmail.com", 587, timeout=5)
+        try:
+            smtp.starttls(context=context)
+            return smtp
+        except (OSError, smtplib.SMTPException):
+            smtp.close()
+            raise
+
+
 class handler(BaseHTTPRequestHandler):
     def reply(self, status):
         self.send_response(status)
@@ -81,7 +95,7 @@ class handler(BaseHTTPRequestHandler):
         if not budget.allow(peer, now) or not mail_budget.allow("mail", now):
             return self.reply(429)
         try:
-            with smtplib.SMTP_SSL("smtp.gmail.com", 465, timeout=8, context=ssl.create_default_context()) as smtp:
+            with connect_mail() as smtp:
                 smtp.login(sender, password)
                 smtp.send_message(build_message(fields, sender))
         except smtplib.SMTPAuthenticationError as error:
