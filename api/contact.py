@@ -73,8 +73,8 @@ class handler(BaseHTTPRequestHandler):
             fields = validate(json.loads(self.rfile.read(int(length)).decode("utf-8")))
         except (ValueError, RecursionError):
             return self.reply(422)
-        sender = os.getenv("GMAIL_USER")
-        password = os.getenv("GMAIL_APP_PASSWORD")
+        sender = os.getenv("GMAIL_USER", "").strip()
+        password = "".join(os.getenv("GMAIL_APP_PASSWORD", "").split())
         if not sender or not password:
             return self.reply(503)
         now = time.monotonic()
@@ -84,6 +84,11 @@ class handler(BaseHTTPRequestHandler):
             with smtplib.SMTP_SSL("smtp.gmail.com", 465, timeout=8, context=ssl.create_default_context()) as smtp:
                 smtp.login(sender, password)
                 smtp.send_message(build_message(fields, sender))
-        except (OSError, smtplib.SMTPException):
+        except smtplib.SMTPAuthenticationError as error:
+            logging.error("mail_authentication_failed smtp_code=%d", error.smtp_code)
+            return self.reply(502)
+        except (OSError, smtplib.SMTPException) as error:
+            logging.error("mail_delivery_failed type=%s smtp_code=%s",
+                          type(error).__name__, getattr(error, "smtp_code", "-"))
             return self.reply(502)
         return self.reply(204)
