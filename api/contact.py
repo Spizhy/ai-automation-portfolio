@@ -1,5 +1,6 @@
 """Accept same-origin portfolio inquiries and deliver them to a fixed Gmail inbox."""
 import json
+import base64
 import logging
 import os
 import re
@@ -8,6 +9,8 @@ import ssl
 import time
 from email.message import EmailMessage
 from http.server import BaseHTTPRequestHandler
+from urllib.parse import urlencode
+from urllib.request import Request, urlopen
 
 from h1cloud_portfolio import RequestBudget
 
@@ -61,6 +64,25 @@ def connect_mail():
             raise
 
 
+def send_gmail_api(message, client_id, client_secret, refresh_token):
+    token_request = Request("https://oauth2.googleapis.com/token", data=urlencode({
+        "client_id": client_id,
+        "client_secret": client_secret,
+        "refresh_token": refresh_token,
+        "grant_type": "refresh_token",
+    }).encode("ascii"))
+    with urlopen(token_request, timeout=8) as response:
+        access_token = json.load(response)["access_token"]
+    encoded = base64.urlsafe_b64encode(message.as_bytes()).decode("ascii")
+    send_request = Request(
+        "https://gmail.googleapis.com/gmail/v1/users/me/messages/send",
+        data=json.dumps({"raw": encoded}).encode("ascii"),
+        headers={"Authorization": f"Bearer {access_token}", "Content-Type": "application/json"},
+    )
+    with urlopen(send_request, timeout=8) as response:
+        return json.load(response)["id"]
+
+
 class handler(BaseHTTPRequestHandler):
     def reply(self, status):
         self.send_response(status)
@@ -89,19 +111,25 @@ class handler(BaseHTTPRequestHandler):
             return self.reply(422)
         sender = os.getenv("GMAIL_USER", "").strip()
         password = "".join(os.getenv("GMAIL_APP_PASSWORD", "").split())
-        if not sender or not password:
+        oauth = tuple(os.getenv(key) for key in (
+            "GMAIL_CLIENT_ID", "GMAIL_CLIENT_SECRET", "GMAIL_REFRESH_TOKEN",
+        ))
+        if not sender or (not all(oauth) and not password):
             return self.reply(503)
         now = time.monotonic()
         if not budget.allow(peer, now) or not mail_budget.allow("mail", now):
             return self.reply(429)
         try:
+            if all(oauth):
+                send_gmail_api(build_message(fields, sender), *oauth)
+                return self.reply(204)
             with connect_mail() as smtp:
                 smtp.login(sender, password)
                 smtp.send_message(build_message(fields, sender))
         except smtplib.SMTPAuthenticationError as error:
             logging.error("mail_authentication_failed smtp_code=%d", error.smtp_code)
             return self.reply(502)
-        except (OSError, smtplib.SMTPException) as error:
+        except (OSError, smtplib.SMTPException, ValueError, KeyError) as error:
             logging.error("mail_delivery_failed type=%s smtp_code=%s",
                           type(error).__name__, getattr(error, "smtp_code", "-"))
             return self.reply(502)

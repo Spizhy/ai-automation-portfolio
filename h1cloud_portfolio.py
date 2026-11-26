@@ -24,9 +24,9 @@ POLL_SECONDS = 10
 STATE = Path(__file__).resolve().parent / ".portfolio-deploy"
 GIT_DIR = STATE / "repo.git"
 LIVE_ARCHIVE = STATE / "live.zip"
-SITE_PATHS = ("index.html", "css", "js", "assets")
+SITE_PATHS = ("index.html", "privacy.html", "css", "js", "assets")
 REQUIRED_FILES = {"index.html", "css/style.css", "js/main.js"}
-PUBLIC_FILE = re.compile(r"(?:index\.html|css/[\w-]+\.css|js/[\w-]+\.js|assets/images/[\w-]+\.(?:png|jpe?g|webp|avif)|assets/fonts/[\w.-]+\.woff2)", re.ASCII)
+PUBLIC_FILE = re.compile(r"(?:(?:index|privacy)\.html|css/[\w-]+\.css|js/[\w-]+\.js|assets/images/[\w-]+\.(?:png|jpe?g|webp|avif)|assets/fonts/[\w.-]+\.woff2)", re.ASCII)
 
 
 class RequestBudget:
